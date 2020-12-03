@@ -11,7 +11,9 @@ public class UserDto implements Serializable {
 	private String lastName;
 	private String email;
 	private String encryptedPassword;
-	private Boolean emailVerifcationStatus;
+	private String emailVerifcationToken;
+	private Boolean emailVerifcationStatus = false;
+//	private List<AddressDTO> address;
 
 	public long getId() {
 		return id;
@@ -59,6 +61,14 @@ public class UserDto implements Serializable {
 
 	public void setEncryptedPassword(String encryptedPassword) {
 		this.encryptedPassword = encryptedPassword;
+	}
+	
+	public String getEmailVerifcationToken() {
+		return emailVerifcationToken;
+	}
+
+	public void setEmailVerifcationToken(String emailVerifcationToken) {
+		this.emailVerifcationToken = emailVerifcationToken;
 	}
 
 	public Boolean getEmailVerifcationStatus() {
