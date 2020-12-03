@@ -14,3 +14,9 @@ spring.datasource.password=<Your mysql password>
 spring.datasource.url=jbdc:mysql://localhost:3306/<Your mysql db name>
 spring.jpa.hibernate.ddl-auto=update
 ```
+
+
+run with
+
+
+> mvn **spring**-**boot**:**run**
