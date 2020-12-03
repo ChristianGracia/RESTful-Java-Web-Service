@@ -1,4 +1,4 @@
-package shared.dto;
+package com.cg.restful_ws.shared.dto;
 
 import java.io.Serializable;
 
