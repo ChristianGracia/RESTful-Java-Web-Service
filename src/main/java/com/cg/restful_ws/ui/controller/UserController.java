@@ -18,43 +18,37 @@ import com.cg.restful_ws.ui.model.response.UserRest;
 @RestController
 @RequestMapping("users")
 public class UserController {
-	
+
 	@Autowired
 	UserService userService;
-	
+
 	@GetMapping
-	public String getUser()
-	{
+	public String getUser() {
 		return "TODO";
 	}
-	
+
 	@PostMapping
-	public UserRest createUser(@RequestBody UserDetailsRequestModel userDetails) 
-	{
+	public UserRest createUser(@RequestBody UserDetailsRequestModel userDetails) {
 		UserRest returnValue = new UserRest();
 		UserDto userDto = new UserDto();
-		
+
 		BeanUtils.copyProperties(userDetails, userDto);
-		
+
 		UserDto createdUser = userService.createUser(userDto);
-		
+
 		BeanUtils.copyProperties(createdUser, returnValue);
-		
+
 		return returnValue;
 	}
-	
+
 	@PutMapping
-	public String updateUSer()
-	{
+	public String updateUSer() {
 		return "TODO";
 	}
-	
+
 	@DeleteMapping
-	public String deleteUser()
-	{
+	public String deleteUser() {
 		return "TODO";
 	}
-	
-	
 
 }
