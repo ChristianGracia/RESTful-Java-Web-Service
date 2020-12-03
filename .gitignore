@@ -20,7 +20,7 @@ target/
 *.ipr
 
 ### Credentials ###
-./src/main/resources/application.properties
+/src/main/resources/application.properties
 
 
 ### VS Code ###
